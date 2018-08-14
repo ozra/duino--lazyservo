@@ -1,0 +1,34 @@
+# Identifying information
+name:        server-cooling-system
+type:        wir11/app
+categories:
+maintainers: Oscar Campbell           # "maintainer" works too
+authors:     Oscar Campbell           # "author" works too
+email:       oscar@campbell.nu
+version:     0.1.0
+description:
+keywords:
+
+# Package sources and locations
+issues: https://manc.se/ozra/lazy-servo/issues
+upstream: https://manc.se/ozra/lazy-servo
+sources:
+   - https://manc.se/ozra/lazy-servo
+
+# Dependencies
+deps:
+   wir11:
+      HolyDio:          ^0.1.0
+      ChronoTrigger:    ^0.1.0
+      UnitRangeControl: ^0.1.0
+      Servo:            ^0.1.0
+
+dev-deps:
+   build:
+      wirduino-makefile:   ^0.1.0
+      atmel-avr-tools:     ^0.1.0
+
+# Directory mappings for deps to side-step defaults
+deps-mapping:
+   wir11:   deps
+   _:       utils
